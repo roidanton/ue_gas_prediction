@@ -1,4 +1,4 @@
-// Richard Hähne 2019
+// Richard Hï¿½hne 2019
 
 #include "MyCharacter.h"
 
@@ -52,7 +52,7 @@ void AMyCharacter::OnMyAttributeValueChange(const FOnAttributeChangeData& Data)
 		constexpr auto displayDuration = 999.f;
 		const FString instance = GetWorld()->IsServer() ? "Server" : "Client";
 		FString role;
-		switch (Role)
+		switch (this->GetLocalRole())
 		{
 		case ROLE_Authority: role = "Authority"; break;
 		case ROLE_AutonomousProxy: role = "Owner"; break;

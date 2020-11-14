@@ -1,4 +1,4 @@
-// Richard Hähne 2019
+// Richard Hï¿½hne 2019
 #pragma once
 
 #include "CoreMinimal.h"
@@ -24,5 +24,5 @@ public:
 	UPROPERTY(ReplicatedUsing = OnRep_MyAttribute, EditAnywhere, BlueprintReadWrite, Category = MyAttributeSet)
 	FGameplayAttributeData MyAttribute { 100.f };
 	ATTRIBUTE_ACCESSORS(UMyAttributeSet, MyAttribute)
-	UFUNCTION() void OnRep_MyAttribute() { GAMEPLAYATTRIBUTE_REPNOTIFY(UMyAttributeSet, MyAttribute); }
+	UFUNCTION() void OnRep_MyAttribute(const FGameplayAttributeData& OldValue) { GAMEPLAYATTRIBUTE_REPNOTIFY(UMyAttributeSet, MyAttribute, OldValue); }
 };
